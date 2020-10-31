@@ -31,25 +31,7 @@ Open internet browser and go to `http://[::1]:20477`. You should see application
 If you want to run application behind web server using reverse proxy, run
 
 ```
-$ sudo fanocli --deploy-http=mhdipv6.fano
-```
-
-Edit `/etc/apache2/sites-available/mhdipv6.fano.conf` and replace
-
-```
-ProxyPassMatch ^/(.*)$ http://127.0.0.1:20477
-```
-
-with
-
-```
-ProxyPassMatch ^/(.*)$ http://[::1]:20477
-```
-
-Reload Apache,
-
-```
-$ sudo systemctl reload apache2
+$ sudo fanocli --deploy-http=mhdipv6.fano --host="[::1]"
 ```
 
 Edit `/etc/hosts` and add
