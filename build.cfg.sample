@@ -39,7 +39,7 @@
 # Add $DEFINE LIBMICROHTTPD
 # Link with libmicrohttpd
 #----------------------------------------------
-#-dLIBMICROHTTPD
+-dLIBMICROHTTPD
 
 #----------------------------------------------
 # Add $DEFINE LIBCURL
