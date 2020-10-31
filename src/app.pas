@@ -26,9 +26,11 @@ begin
         .addOption('host', 1)
         .addOption('port', 1)
         .build();
-    svrConfig.host := cliParams.getOption('host', '127.0.0.1');
+    svrConfig.host := cliParams.getOption('host', '::1');
     svrConfig.port := cliParams.getOption('port', 20477);
-    writeln('Starting application at ', svrConfig.host, ':', svrConfig.port);
+    svrConfig.useIPv6 := true;
+    svrConfig.dualStack := false;
+    writeln('Starting application at [', svrConfig.host, ']:', svrConfig.port);
 
     svrConfig.documentRoot := getCurrentDir() + '/public';
     svrConfig.serverName := 'http.fano';
