@@ -11,7 +11,7 @@ command line tools to help scaffolding web application using Fano Framework.
 - Linux or FreeBSD
 - [Free Pascal](https://www.freepascal.org/) >= 3.0
 - [Fano CLI](https://github.com/fanoframework/fano-cli)
-- libmicrohttpd
+- [libmicrohttpd](https://fanoframework.github.io/known-issues#missing-libmicrohttpd-development-package)
 - Web server ([Apache with mod_proxy_http](https://httpd.apache.org/docs/current/mod/mod_proxy_http.html), nginx) as reverse proxy (optional)
 - Administrative privilege for setting up virtual host
 
